@@ -1,0 +1,22 @@
+{
+  "name": "nature-tours",
+  "version": "1.0.0",
+  "description": "bla bla",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Benneee/Nature-Tours.git"
+  },
+  "author": "benneee_",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Benneee/Nature-Tours/issues"
+  },
+  "homepage": "https://github.com/Benneee/Nature-Tours#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
