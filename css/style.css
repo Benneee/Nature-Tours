@@ -30,27 +30,24 @@ body {
   background-position: top;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); }
-
-.header__logo-box {
-  position: absolute;
-  /* top: 40px; */
-  top: 4rem;
-  /* left: 40px; */
-  left: 4rem; }
-
-.header__logo {
-  /* The width would be sorted by the browser */
-  /* height: 35px; */
-  height: 3.5rem; }
-
-.header__text-box {
-  /* The position, top and left properties are dependent on the parent element */
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  /* However, because what we want is to center the text box properly on the page, we use the transform property along with translate, this is totally independent on the parent elements but only on the element's position. */
-  transform: translate(-50%, -50%);
-  text-align: center; }
+  .header__logo-box {
+    position: absolute;
+    /* top: 40px; */
+    top: 4rem;
+    /* left: 40px; */
+    left: 4rem; }
+  .header__logo {
+    /* The width would be sorted by the browser */
+    /* height: 35px; */
+    height: 3.5rem; }
+  .header__text-box {
+    /* The position, top and left properties are dependent on the parent element */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* However, because what we want is to center the text box properly on the page, we use the transform property along with translate, this is totally independent on the parent elements but only on the element's position. */
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .heading-primary {
   color: #fff;
@@ -59,30 +56,28 @@ body {
   backface-visibility: hidden;
   /* margin-bottom: 60px; */
   margin-bottom: 6rem; }
-
-.heading-primary--main {
-  display: block;
-  /* font-size: 60px; */
-  font-size: 6rem;
-  font-weight: 400;
-  /* letter-spacing: 35px; */
-  letter-spacing: 3.5rem;
-  /* To trigger animations, there are twon important properties, animation-name & animation-duration */
-  animation-name: moveInFromLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /* animation-delay: 3s; */
-  /* animation-iteration-count: 3; */ }
-
-.heading-primary--sub {
-  display: block;
-  /* font-size: 20px; */
-  font-size: 2rem;
-  font-weight: 700;
-  /* letter-spacing: 17.4px; */
-  letter-spacing: 1.75rem;
-  /* Animations */
-  animation: moveInFromRight 1s ease-out; }
+  .heading-primary--main {
+    display: block;
+    /* font-size: 60px; */
+    font-size: 6rem;
+    font-weight: 400;
+    /* letter-spacing: 35px; */
+    letter-spacing: 3.5rem;
+    /* To trigger animations, there are twon important properties, animation-name & animation-duration */
+    animation-name: moveInFromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-delay: 3s; */
+    /* animation-iteration-count: 3; */ }
+  .heading-primary--sub {
+    display: block;
+    /* font-size: 20px; */
+    font-size: 2rem;
+    font-weight: 700;
+    /* letter-spacing: 17.4px; */
+    letter-spacing: 1.75rem;
+    /* Animations */
+    animation: moveInFromRight 1s ease-out; }
 
 /* Two animation methods */
 /* 1. The transition property - changes can be made when an event occurs */
@@ -123,8 +118,7 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   /* padding: 15px 40px; */
@@ -142,8 +136,11 @@ body {
   /* Order of values for box-shadow: offsetX offsetY blur color */
   /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
-.btn:active {
+.btn::active {
   transform: translateY(-1px);
   /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
@@ -151,6 +148,8 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: '';
@@ -163,13 +162,6 @@ body {
   left: 0;
   z-index: -1;
   transition: all 0.4s; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
 
 .btn--animated {
   animation: moveInFromBottom 1s ease-out 0.75s;
