@@ -27,6 +27,10 @@ min-width MQs
 1800 ++          : Big Desktop
 */
 
+// ORDER For MQ Changes
+
+// Base + Typography > general layout + grid > page layout > components
+
 @mixin respond-phone {
   @media (max-width: 600px) {
     @content;
