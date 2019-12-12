@@ -10,6 +10,18 @@
   visibility: hidden;
   transition: all 0.3s;
 
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  // Graceful degradation
+  @supports (
+    -webkit-backdrop-filter: blur(10px) or (-webkit-backdrop-filter: blur(10px))
+  ) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, 0.3);
+  }
+
   // TODO: Responsiveness for this popup
 
   &__content {
